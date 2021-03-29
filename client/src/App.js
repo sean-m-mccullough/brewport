@@ -9,6 +9,12 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <button onClick={(e) => {
+          e.preventDefault();
+          fetch('/testAPI')
+          .then(response => response.json())
+          .then(data => console.log(data));
+        }}>testAPI</button>
         <a
           className="App-link"
           href="https://reactjs.org"
